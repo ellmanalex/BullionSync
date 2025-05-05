@@ -27,49 +27,49 @@ window.app.component('features-section', {
                                 <span>{{ item }}</span>
                             </li>
                         </ul>
+                        <div class="cta-section">
+                            <p>Ready to transform your jewelry pricing workflow?</p>
+                            <button class="btn-primary" @click="showForm">
+                                <i class="fas fa-download"></i> Install Now
+                            </button>
+                        </div>
                     </div>
                     <div class="showcase-image">
-                        <div class="app-demo">
-                            <div class="demo-header">
-                                <div class="demo-title">BullionSync Dashboard</div>
-                                <div class="demo-controls">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
+                        <div class="feature-image-grid">
+                            <div class="feature-image-item">
+                                <div class="feature-image-icon">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                                <div class="feature-image-text">
+                                    <h4>Auto Updates</h4>
+                                    <p>Prices adjust dynamically based on market rates</p>
                                 </div>
                             </div>
-                            <div class="demo-body">
-                                <div class="demo-sidebar">
-                                    <div class="sidebar-item active">Dashboard</div>
-                                    <div class="sidebar-item">Products</div>
-                                    <div class="sidebar-item">Pricing Rules</div>
-                                    <div class="sidebar-item">Settings</div>
-                                    <div class="sidebar-item">Help</div>
+                            <div class="feature-image-item">
+                                <div class="feature-image-icon">
+                                    <i class="fas fa-calculator"></i>
                                 </div>
-                                <div class="demo-main">
-                                    <div class="demo-widget price-widget">
-                                        <div class="widget-header">Gold Price</div>
-                                        <div class="widget-body">
-                                            <div class="price">$1,876.42</div>
-                                            <div class="change positive">+0.38%</div>
-                                        </div>
-                                    </div>
-                                    <div class="demo-widget status-widget">
-                                        <div class="widget-header">Products Status</div>
-                                        <div class="widget-body">
-                                            <div class="status-item">
-                                                <span>Up to date</span>
-                                                <span class="count">42</span>
-                                            </div>
-                                            <div class="status-item">
-                                                <span>Needs update</span>
-                                                <span class="count alert">8</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="demo-action">
-                                        <button class="demo-button">Update All Prices</button>
-                                    </div>
+                                <div class="feature-image-text">
+                                    <h4>Smart Formulas</h4>
+                                    <p>Custom pricing rules based on metal weight and purity</p>
+                                </div>
+                            </div>
+                            <div class="feature-image-item">
+                                <div class="feature-image-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="feature-image-text">
+                                    <h4>Price Protection</h4>
+                                    <p>Never sell below your cost with stop-loss thresholds</p>
+                                </div>
+                            </div>
+                            <div class="feature-image-item">
+                                <div class="feature-image-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="feature-image-text">
+                                    <h4>Price Trends</h4>
+                                    <p>Monitor market fluctuations and optimize pricing</p>
                                 </div>
                             </div>
                         </div>
@@ -109,6 +109,12 @@ window.app.component('features-section', {
                 'Custom formula configuration tools',
                 'Notifications for significant price changes'
             ]
+        }
+    },
+    methods: {
+        showForm() {
+            // Emit an event to show the email form
+            window.app.$emit('show-email-form');
         }
     }
 });

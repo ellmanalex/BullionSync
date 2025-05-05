@@ -16,16 +16,47 @@ window.app.component('hero-section', {
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="price-card">
-                        <h3>Live Gold Price</h3>
-                        <div class="gold-price-chart">
-                            <canvas ref="goldChart"></canvas>
+                    <div class="app-demo">
+                        <div class="demo-header">
+                            <div class="demo-title">BullionSync Dashboard</div>
+                            <div class="demo-controls">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
                         </div>
-                        <div class="current-price">
-                            <span>Current: ${{ currentGoldPrice }}</span>
-                            <span class="price-change" :class="priceChangeClass">
-                                <i :class="priceChangeIcon"></i> {{ priceChange }}%
-                            </span>
+                        <div class="demo-body">
+                            <div class="demo-sidebar">
+                                <div class="sidebar-item active">Dashboard</div>
+                                <div class="sidebar-item">Products</div>
+                                <div class="sidebar-item">Pricing Rules</div>
+                                <div class="sidebar-item">Settings</div>
+                            </div>
+                            <div class="demo-main">
+                                <div class="demo-widget price-widget">
+                                    <div class="widget-header">Gold Price</div>
+                                    <div class="widget-body">
+                                        <div class="price">$1,876.42</div>
+                                        <div class="change positive">+0.38%</div>
+                                    </div>
+                                </div>
+                                <div class="demo-widget status-widget">
+                                    <div class="widget-header">Products Status</div>
+                                    <div class="widget-body">
+                                        <div class="status-item">
+                                            <span>Up to date</span>
+                                            <span class="count">42</span>
+                                        </div>
+                                        <div class="status-item">
+                                            <span>Needs update</span>
+                                            <span class="count alert">8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-action">
+                                    <button class="demo-button">Update All Prices</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -39,73 +70,7 @@ window.app.component('hero-section', {
     `,
     data() {
         return {
-            currentGoldPrice: '1,876.42',
-            priceChange: '0.38',
-            priceChangeClass: 'positive',
-            priceChangeIcon: 'fas fa-arrow-up',
-            goldChart: null,
-            goldPriceData: [1865.20, 1868.45, 1872.30, 1869.15, 1871.80, 1876.42]
-        }
-    },
-    mounted() {
-        this.$nextTick(() => {
-            this.initGoldChart();
-        });
-    },
-    methods: {
-        initGoldChart() {
-            const ctx = this.$refs.goldChart.getContext('2d');
-            
-            this.goldChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['5d ago', '4d ago', '3d ago', '2d ago', 'Yesterday', 'Today'],
-                    datasets: [{
-                        label: 'Gold Price (USD)',
-                        data: this.goldPriceData,
-                        fill: true,
-                        backgroundColor: 'rgba(212, 175, 55, 0.2)',
-                        borderColor: 'rgba(212, 175, 55, 1)',
-                        borderWidth: 2,
-                        tension: 0.4,
-                        pointBackgroundColor: 'rgba(212, 175, 55, 1)',
-                        pointRadius: 3
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            mode: 'index',
-                            intersect: false,
-                            callbacks: {
-                                label: function(context) {
-                                    return `$${context.raw.toFixed(2)}`;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: false,
-                            ticks: {
-                                callback: function(value) {
-                                    return '$' + value;
-                                }
-                            }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            }
-                        }
-                    }
-                }
-            });
+            // Simple data for hero section if needed in the future
         }
     }
 });

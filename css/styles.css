@@ -462,6 +462,63 @@ button {
     background-color: var(--color-secondary);
 }
 
+.cta-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--color-light-gray);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+}
+
+.cta-section p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.feature-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.feature-image-item {
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+}
+
+.feature-image-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.feature-image-icon i {
+    font-size: 20px;
+    color: var(--color-primary-dark);
+}
+
+.feature-image-text h4 {
+    margin-bottom: 5px;
+    color: var(--color-secondary);
+}
+
+.feature-image-text p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
 .app-demo {
     border-radius: var(--border-radius-md);
     overflow: hidden;

@@ -48,6 +48,11 @@ window.app = Vue.createApp({
                 header.classList.remove('scrolled');
             }
         });
+        
+        // Listen for the global show-email-form event
+        this.$on('show-email-form', () => {
+            this.showEmailForm();
+        });
     }
 });
 
