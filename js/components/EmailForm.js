@@ -1,5 +1,5 @@
 // Email Form component
-app.component('email-form', {
+window.app.component('email-form', {
     template: `
         <div class="modal email-form-modal">
             <div class="modal-content">

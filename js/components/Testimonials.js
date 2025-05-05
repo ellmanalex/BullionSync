@@ -1,5 +1,5 @@
 // Testimonials section component
-app.component('testimonials-section', {
+window.app.component('testimonials-section', {
     template: `
         <section id="testimonials" class="testimonials">
             <div class="container">

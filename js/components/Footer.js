@@ -1,5 +1,5 @@
 // Footer component
-app.component('footer-section', {
+window.app.component('footer-section', {
     template: `
         <footer class="footer">
             <div class="container">

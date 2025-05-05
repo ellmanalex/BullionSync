@@ -1,5 +1,5 @@
 // Benefits section component
-app.component('benefits-section', {
+window.app.component('benefits-section', {
     template: `
         <section id="benefits" class="benefits">
             <div class="container">
