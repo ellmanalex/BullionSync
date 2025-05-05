@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Vue.js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     
     <!-- Axios for API requests -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -76,6 +76,9 @@
         <div class="overlay" v-if="isEmailFormVisible || showSuccessMessage" @click="closeAllModals"></div>
     </div>
 
+    <!-- Main App Script (must come first to create the app) -->
+    <script src="js/app.js"></script>
+    
     <!-- Component Scripts -->
     <script src="js/components/Hero.js"></script>
     <script src="js/components/Features.js"></script>
@@ -83,8 +86,5 @@
     <script src="js/components/EmailForm.js"></script>
     <script src="js/components/Testimonials.js"></script>
     <script src="js/components/Footer.js"></script>
-    
-    <!-- Main App Script -->
-    <script src="js/app.js"></script>
 </body>
 </html>

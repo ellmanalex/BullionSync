@@ -1,5 +1,5 @@
 // Hero section component
-app.component('hero-section', {
+window.app.component('hero-section', {
     template: `
         <section class="hero">
             <div class="container">

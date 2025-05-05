@@ -1,5 +1,5 @@
 // Features section component
-app.component('features-section', {
+window.app.component('features-section', {
     template: `
         <section id="features" class="features">
             <div class="container">

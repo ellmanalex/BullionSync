@@ -1,5 +1,5 @@
-// Main Vue application
-const app = Vue.createApp({
+// Define the global app variable to be used across components
+window.app = Vue.createApp({
     data() {
         return {
             isEmailFormVisible: false,
@@ -51,5 +51,9 @@ const app = Vue.createApp({
     }
 });
 
-// Mount the app after all components are registered
-app.mount('#app');
+// Components will be registered in their own files
+
+// Mount the app after all scripts have loaded
+document.addEventListener('DOMContentLoaded', () => {
+    window.app.mount('#app');
+});
